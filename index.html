@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guild Fight · Etheria Restart</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --void:#100e1b;
+  --panel:#191630;
+  --panel-2:#211d3c;
+  --edge:#322c56;
+  --edge-soft:#2a2547;
+  --ink:#e9e6f7;
+  --muted:#8e87b5;
+  --foe:#ff4470;
+  --foe-dim:#3a1526;
+  --ally:#35e0bd;
+  --ally-dim:#0e3330;
+  --note:#f5c451;
+  --display:"Chakra Petch",system-ui,sans-serif;
+  --body:"IBM Plex Sans Thai",system-ui,sans-serif;
+  --r:10px;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  background:
+    radial-gradient(1100px 620px at 12% -8%, #241d47 0%, transparent 62%),
+    radial-gradient(900px 520px at 92% 4%, #2a1533 0%, transparent 58%),
+    var(--void);
+  background-attachment:fixed;
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:15px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+}
+.wrap{max-width:1120px;margin:0 auto;padding:28px 20px 80px}
+
+/* ---------- header ---------- */
+header{
+  display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;
+  gap:16px;padding-bottom:18px;margin-bottom:26px;
+  border-bottom:1px solid var(--edge);
+}
+.eyebrow{
+  font-family:var(--display);font-weight:600;font-size:11px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--muted);margin:0 0 6px;
+}
+h1{
+  font-family:var(--display);font-weight:700;font-size:clamp(27px,5.2vw,42px);
+  letter-spacing:.01em;margin:0;line-height:1.05;
+}
+h1 .vs{
+  color:var(--foe);
+  -webkit-text-stroke:0;
+}
+.tagline{color:var(--muted);margin:8px 0 0;font-size:14px;max-width:46ch}
+.stamp{
+  font-family:var(--display);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);text-align:right;line-height:1.9;white-space:nowrap;
+}
+.stamp b{color:var(--ink);font-weight:600}
+
+/* ---------- picker ---------- */
+.finder{
+  background:linear-gradient(180deg,var(--panel-2),var(--panel));
+  border:1px solid var(--edge);border-radius:var(--r);
+  padding:20px;margin-bottom:26px;
+}
+.finder-head{
+  display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:10px;
+  margin-bottom:14px;
+}
+.finder-head h2{
+  font-family:var(--display);font-size:13px;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;margin:0;color:var(--ink);
+}
+.finder-head h2 span{color:var(--foe)}
+.hint{color:var(--muted);font-size:12.5px}
+.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.slot{position:relative}
+.slot-label{
+  font-family:var(--display);font-size:10.5px;font-weight:600;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;
+}
+.slot-btn{
+  width:100%;display:flex;align-items:center;gap:11px;
+  background:var(--void);border:1px solid var(--edge);border-radius:8px;
+  padding:9px 10px;cursor:pointer;text-align:left;color:var(--ink);
+  font-family:var(--body);font-size:14px;transition:border-color .15s,background .15s;
+  min-height:60px;
+}
+.slot-btn:hover{border-color:var(--foe);background:#171329}
+.slot-btn:focus-visible{outline:2px solid var(--foe);outline-offset:2px}
+.slot-btn.filled{border-color:rgba(255,68,112,.55);background:linear-gradient(90deg,var(--foe-dim),var(--void) 72%)}
+.slot-face{
+  width:40px;height:40px;flex:none;border-radius:6px;object-fit:cover;
+  background:var(--panel-2);border:1px solid var(--edge);
+}
+.slot-face.blank{
+  display:grid;place-items:center;color:var(--edge);
+  font-family:var(--display);font-size:19px;font-weight:700;padding:0;
+}
+.slot-name{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:500}
+.slot-name.ph{color:var(--muted);font-weight:400}
+.slot-btn.filled{padding-right:36px}
+.slot-x{
+  position:absolute;right:6px;bottom:6px;
+  width:26px;height:26px;border-radius:5px;border:0;background:transparent;
+  color:var(--muted);cursor:pointer;font-size:17px;line-height:1;
+  display:grid;place-items:center;padding:0;
+}
+.slot-x:hover{background:rgba(255,68,112,.16);color:var(--foe)}
+.slot-x:focus-visible{outline:2px solid var(--foe);outline-offset:1px}
+.finder-foot{
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;
+  gap:12px;margin-top:15px;padding-top:14px;border-top:1px solid var(--edge-soft);
+}
+.result-count{font-family:var(--display);font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.result-count b{color:var(--ally);font-weight:700}
+.result-count b.zero{color:var(--foe)}
+.ghost{
+  font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.13em;
+  text-transform:uppercase;background:transparent;color:var(--muted);
+  border:1px solid var(--edge);border-radius:6px;padding:7px 13px;cursor:pointer;
+}
+.ghost:hover{border-color:var(--foe);color:var(--ink)}
+.ghost:focus-visible{outline:2px solid var(--foe);outline-offset:2px}
+.ghost[disabled]{opacity:.35;cursor:default}
+.ghost[disabled]:hover{border-color:var(--edge);color:var(--muted)}
+
+/* ---------- match cards ---------- */
+.matches{display:flex;flex-direction:column;gap:18px}
+.match{
+  background:var(--panel);border:1px solid var(--edge);border-radius:var(--r);
+  overflow:hidden;animation:rise .32s cubic-bezier(.2,.7,.3,1) both;
+}
+@keyframes rise{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.match{animation:none}}
+.arena{display:grid;grid-template-columns:1fr 62px 1fr;align-items:stretch}
+.side{padding:15px 16px 16px}
+.side.foe{background:linear-gradient(160deg,rgba(255,68,112,.10),transparent 62%)}
+.side.ally{background:linear-gradient(200deg,rgba(53,224,189,.10),transparent 62%)}
+.side-label{
+  font-family:var(--display);font-size:10.5px;font-weight:700;letter-spacing:.2em;
+  text-transform:uppercase;margin:0 0 11px;display:flex;align-items:center;gap:8px;
+}
+.side.foe .side-label{color:var(--foe)}
+.side.ally .side-label{color:var(--ally);justify-content:flex-end}
+.side-label::after{content:"";flex:1;height:1px;background:currentColor;opacity:.3}
+.side.ally .side-label::after{order:-1}
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:330px}
+.side.ally .team{margin-left:auto}
+.unit{min-width:0}
+.card-img{
+  width:100%;object-fit:cover;display:block;
+  border-radius:6px;background:var(--panel-2);border:1px solid var(--edge);
+}
+.unit .animus{aspect-ratio:1;border-radius:6px 6px 0 0;border-bottom:0}
+.unit .shell{aspect-ratio:3/2;object-position:50% 26%;border-radius:0 0 6px 6px;border-top:0;opacity:.94}
+.unit.hit .animus{border-color:var(--foe);box-shadow:0 0 0 2px rgba(255,68,112,.45)}
+.unit-name{
+  font-family:var(--display);font-size:10.5px;font-weight:600;letter-spacing:.02em;
+  margin-top:5px;line-height:1.3;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+.unit-shell{
+  font-size:10px;color:var(--muted);line-height:1.3;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+.unit.hit .unit-name{color:var(--foe)}
+
+/* the seam — signature element */
+.seam{position:relative;display:grid;place-items:center}
+.seam::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(101deg,transparent 46%,var(--edge) 46%,var(--edge) 47.2%,transparent 47.2%);
+}
+.seam span{
+  position:relative;z-index:1;
+  font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.06em;
+  color:var(--muted);background:var(--panel);
+  border:1px solid var(--edge);border-radius:999px;padding:5px 8px;
+}
+.guide{
+  display:flex;gap:11px;align-items:flex-start;
+  padding:12px 16px;border-top:1px solid var(--edge-soft);
+  background:rgba(245,196,81,.05);
+}
+.guide-tag{
+  font-family:var(--display);font-size:10px;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--note);flex:none;padding-top:2px;
+}
+.guide p{margin:0;font-size:14px;color:var(--ink);white-space:pre-wrap;overflow-wrap:anywhere}
+.guide p.none{color:var(--muted);font-style:italic}
+
+/* ---------- empty ---------- */
+.empty{
+  border:1px dashed var(--edge);border-radius:var(--r);
+  padding:44px 24px;text-align:center;
+}
+.empty h3{font-family:var(--display);font-size:16px;font-weight:600;margin:0 0 7px;letter-spacing:.02em}
+.empty p{color:var(--muted);margin:0;font-size:14px}
+
+/* ---------- modal ---------- */
+.overlay{
+  position:fixed;inset:0;z-index:50;background:rgba(8,7,14,.76);
+  backdrop-filter:blur(3px);display:grid;place-items:center;padding:20px;
+}
+.overlay[hidden]{display:none}
+.modal{
+  width:min(660px,100%);max-height:min(76vh,660px);display:flex;flex-direction:column;
+  background:var(--panel);border:1px solid var(--edge);border-radius:12px;overflow:hidden;
+}
+.modal-head{padding:16px 18px 13px;border-bottom:1px solid var(--edge)}
+.modal-head h3{
+  font-family:var(--display);font-size:12px;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;margin:0 0 11px;color:var(--muted);
+}
+.modal-head h3 b{color:var(--foe)}
+#q{
+  width:100%;background:var(--void);border:1px solid var(--edge);border-radius:7px;
+  padding:10px 12px;color:var(--ink);font-family:var(--body);font-size:15px;
+}
+#q:focus{outline:none;border-color:var(--foe)}
+#q::placeholder{color:var(--muted)}
+.grid{
+  overflow-y:auto;padding:14px 18px 18px;
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:10px;
+}
+.pick{
+  background:transparent;border:1px solid transparent;border-radius:8px;padding:5px 4px 7px;
+  cursor:pointer;color:var(--ink);font-family:var(--body);display:block;width:100%;margin:0;
+}
+.pick:hover:not([disabled]){border-color:var(--foe);background:var(--foe-dim)}
+.pick:focus-visible{outline:2px solid var(--foe);outline-offset:1px}
+.pick img{
+  width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;
+  border:1px solid var(--edge);background:var(--panel-2);display:block;
+}
+.pick .cap{
+  display:block;font-size:10.5px;line-height:1.3;margin-top:5px;text-align:center;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+.pick[disabled]{opacity:.3;cursor:not-allowed}
+.pick[disabled] .cap::after{content:" · in use";color:var(--foe)}
+.no-hits{grid-column:1/-1;text-align:center;color:var(--muted);padding:26px 0;font-size:14px}
+.group{
+  grid-column:1/-1;display:flex;align-items:center;gap:9px;
+  font-family:var(--display);font-size:10px;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--muted);margin:4px 0 0;
+}
+.group::after{content:"";flex:1;height:1px;background:var(--edge-soft)}
+.group.rec{color:var(--foe)}
+.group:first-child{margin-top:0}
+
+@media(max-width:720px){
+  .wrap{padding:20px 14px 60px}
+  .slots{grid-template-columns:1fr;gap:9px}
+  .arena{grid-template-columns:1fr}
+  .seam{height:40px}
+  .seam::before{background:linear-gradient(180deg,transparent 48%,var(--edge) 48%,var(--edge) 52%,transparent 52%)}
+  .side.ally .side-label{justify-content:flex-start}
+  .side.ally .side-label::after{order:0}
+  .stamp{text-align:left}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div>
+      <p class="eyebrow">Etheria Restart · HolyShip</p>
+      <h1>Guild Fight <span class="vs">Counter</span> Book</h1>
+      <p class="tagline">Pick the Animus you're facing, enjoy GvG, and let's fight together to win together. Cheers, HolyShip!👑</p>
+    </div>
+    <div class="stamp">
+      <div><b id="stat-lineups">–</b> lineups</div>
+      <div><b id="stat-roster">–</b> animus on file</div>
+      <div id="stat-src">&nbsp;</div>
+    </div>
+  </header>
+
+  <section class="finder">
+    <div class="finder-head">
+      <h2>Find <span>enemy</span> team</h2>
+      <span class="hint">One, two, or all three slots</span>
+    </div>
+    <div class="slots" id="slots"></div>
+    <div class="finder-foot">
+      <span class="result-count" id="count">Showing every lineup</span>
+      <button class="ghost" id="clear" disabled>Clear slots</button>
+    </div>
+  </section>
+
+  <main class="matches" id="matches"></main>
+</div>
+
+<div class="overlay" id="overlay" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-head">
+      <h3 id="modal-title">Enemy slot <b id="modal-slot">A</b></h3>
+      <input type="text" id="q" placeholder="Search animus…" autocomplete="off" spellcheck="false">
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</div>
+
+<script>
+const SLOT_LABELS = ["A", "B", "C"];
+const $ = id => document.getElementById(id);
+
+let DATA = { roster: { animus: {}, shell: {} }, lineups: [], source: "" };
+let picks = [null, null, null];          // slug per slot
+let openSlot = null;
+let lastFocus = null;
+let loadFailed = false;
+
+const slug = s => (s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "unknown";
+const esc = s => (s || "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+function animus(key) { return DATA.roster.animus[key] || { name: key, img: null }; }
+function shell(key) { return DATA.roster.shell[key] || { name: key, img: null }; }
+
+/* ---------- boot ---------- */
+async function boot() {
+  try {
+    const res = await fetch("data.json", { cache: "no-store" });
+    if (!res.ok) throw new Error(res.status);
+    DATA = await res.json();
+  } catch (err) {
+    loadFailed = true;
+    console.error("Couldn't read data.json — serve the folder over http.", err);
+  }
+  renderAll();
+}
+
+function renderAll() {
+  $("stat-lineups").textContent = DATA.lineups.length;
+  $("stat-roster").textContent = Object.keys(DATA.roster.animus).length;
+  $("stat-src").textContent = DATA.source || "";
+  renderSlots();
+  renderMatches();
+}
+
+/* ---------- slots ---------- */
+function renderSlots() {
+  $("slots").innerHTML = picks.map((key, i) => {
+    const has = !!key;
+    const a = has ? animus(key) : null;
+    const face = has && a.img
+      ? `<img class="slot-face" src="${esc(a.img)}" alt="" loading="lazy">`
+      : `<span class="slot-face blank" aria-hidden="true">${has ? "?" : "+"}</span>`;
+    return `
+      <div class="slot">
+        <span class="slot-label" id="lab-${i}">Enemy ${SLOT_LABELS[i]}</span>
+        <button class="slot-btn${has ? " filled" : ""}" data-slot="${i}" aria-labelledby="lab-${i}">
+          ${face}
+          <span class="slot-name${has ? "" : " ph"}">${has ? esc(a.name) : "Choose animus"}</span>
+        </button>
+        ${has ? `<button class="slot-x" data-clear="${i}" aria-label="Clear enemy ${SLOT_LABELS[i]}">×</button>` : ""}
+      </div>`;
+  }).join("");
+  $("clear").disabled = !picks.some(Boolean);
+}
+
+$("slots").addEventListener("click", e => {
+  const x = e.target.closest("[data-clear]");
+  if (x) { e.stopPropagation(); picks[+x.dataset.clear] = null; renderSlots(); renderMatches(); return; }
+  const btn = e.target.closest("[data-slot]");
+  if (btn) openPicker(+btn.dataset.slot);
+});
+$("clear").addEventListener("click", () => { picks = [null, null, null]; renderSlots(); renderMatches(); });
+
+/* ---------- picker modal ---------- */
+function openPicker(i) {
+  openSlot = i;
+  lastFocus = document.activeElement;
+  $("modal-slot").textContent = SLOT_LABELS[i];
+  $("q").value = "";
+  renderGrid("");
+  $("overlay").hidden = false;
+  $("q").focus();
+}
+function closePicker() {
+  $("overlay").hidden = true;
+  openSlot = null;
+  if (lastFocus) lastFocus.focus();
+}
+/** Animus that show up on the enemy side of at least one recorded lineup. */
+function recordedFoes() {
+  const set = new Set();
+  for (const l of DATA.lineups) for (const u of l.enemy) if (u.animus) set.add(slug(u.animus));
+  return set;
+}
+
+function renderGrid(query) {
+  const q = query.trim().toLowerCase();
+  const taken = picks.filter((p, i) => p && i !== openSlot);
+  const foes = recordedFoes();
+
+  const rows = Object.entries(DATA.roster.animus)
+    .filter(([, a]) => a.name.toLowerCase().includes(q))
+    .sort((a, b) => a[1].name.localeCompare(b[1].name));
+
+  if (!rows.length) {
+    $("grid").innerHTML = `<p class="no-hits">No animus named “${esc(query)}”.</p>`;
+    return;
+  }
+
+  const tile = ([key, a]) => {
+    const used = taken.includes(key);
+    const img = a.img
+      ? `<img src="${esc(a.img)}" alt="" loading="lazy">`
+      : `<img alt="" style="visibility:hidden">`;
+    return `<button class="pick" data-key="${esc(key)}"${used ? " disabled" : ""}>
+      ${img}<span class="cap">${esc(a.name)}</span>
+    </button>`;
+  };
+
+  const inBook = rows.filter(([k]) => foes.has(k));
+  const rest = rows.filter(([k]) => !foes.has(k));
+  let html = "";
+  if (inBook.length) html += `<p class="group rec">In the book</p>` + inBook.map(tile).join("");
+  if (rest.length) html += `<p class="group">${inBook.length ? "Not recorded yet" : "Roster"}</p>` + rest.map(tile).join("");
+  $("grid").innerHTML = html;
+}
+$("q").addEventListener("input", e => renderGrid(e.target.value));
+$("grid").addEventListener("click", e => {
+  const b = e.target.closest(".pick");
+  if (!b || b.disabled) return;
+  picks[openSlot] = b.dataset.key;
+  closePicker();
+  renderSlots();
+  renderMatches();
+});
+$("overlay").addEventListener("mousedown", e => { if (e.target === $("overlay")) closePicker(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("overlay").hidden) closePicker(); });
+
+/* ---------- matching ---------- */
+function matches() {
+  const want = picks.filter(Boolean);
+  return DATA.lineups
+    .map((l, idx) => ({ ...l, idx, keys: l.enemy.map(u => slug(u.animus)) }))
+    .filter(l => want.every(k => l.keys.includes(k)));
+}
+
+function unitHTML(unit, hit) {
+  const a = animus(slug(unit.animus)), s = shell(slug(unit.shell));
+  const box = (src, cls) => src
+    ? `<img class="card-img ${cls}" src="${esc(src)}" alt="" loading="lazy">`
+    : `<span class="card-img ${cls}"></span>`;
+  return `<div class="unit${hit ? " hit" : ""}">
+    ${box(a.img, "animus")}${box(s.img, "shell")}
+    <div class="unit-name">${esc(a.name)}</div>
+    <div class="unit-shell">${esc(s.name) || "—"}</div>
+  </div>`;
+}
+
+function renderMatches() {
+  const want = picks.filter(Boolean);
+  const found = matches();
+
+  $("count").innerHTML = want.length
+    ? `<b class="${found.length ? "" : "zero"}">${found.length}</b> ${found.length === 1 ? "lineup" : "lineups"} with ${want.length === 1 ? "that animus" : "all " + want.length}`
+    : `Showing every lineup`;
+
+  if (!DATA.lineups.length) {
+    $("matches").innerHTML = loadFailed
+      ? `<div class="empty"><h3>Couldn't read data.json</h3>
+        <p>Serve this folder over http rather than opening the file directly.</p></div>`
+      : `<div class="empty"><h3>No lineups loaded</h3>
+        <p>Run <code>build.py</code> to generate data.json from the workbook.</p></div>`;
+    return;
+  }
+  if (!found.length) {
+    const names = want.map(k => animus(k).name).join(" + ");
+    $("matches").innerHTML = `<div class="empty"><h3>Nothing recorded against ${esc(names)}</h3>
+      <p>Try clearing a slot to widen the search, or add this lineup to the Guild_fight sheet.</p></div>`;
+    return;
+  }
+
+  $("matches").innerHTML = found.map(l => `
+    <article class="match">
+      <div class="arena">
+        <div class="side foe">
+          <p class="side-label">Enemy team</p>
+          <div class="team">${l.enemy.map(u => unitHTML(u, want.includes(slug(u.animus)))).join("")}</div>
+        </div>
+        <div class="seam"><span>VS</span></div>
+        <div class="side ally">
+          <p class="side-label">Recommend team</p>
+          <div class="team">${l.ours.map(u => unitHTML(u, false)).join("")}</div>
+        </div>
+      </div>
+      <div class="guide">
+        <span class="guide-tag">Play</span>
+        ${l.guide ? `<p>${esc(l.guide)}</p>` : `<p class="none">No note for this lineup.</p>`}
+      </div>
+    </article>`).join("");
+}
+
+boot();
+</script>
+</body>
+</html>

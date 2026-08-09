@@ -1,0 +1,512 @@
+{
+ "source": "etheria_restart.xlsx",
+ "roster": {
+  "animus": {
+   "airon": {
+    "name": "Airon",
+    "img": "assets/animus/airon.webp"
+   },
+   "areal": {
+    "name": "Areal",
+    "img": "assets/animus/areal.webp"
+   },
+   "asal": {
+    "name": "Asal",
+    "img": "assets/animus/asal.webp"
+   },
+   "batsby": {
+    "name": "Batsby",
+    "img": "assets/animus/batsby.webp"
+   },
+   "beyontin": {
+    "name": "Beyontin",
+    "img": "assets/animus/beyontin.webp"
+   },
+   "borgne": {
+    "name": "Borgne",
+    "img": "assets/animus/borgne.webp"
+   },
+   "bornova": {
+    "name": "Bornova",
+    "img": "assets/animus/bornova.webp"
+   },
+   "cachi": {
+    "name": "Cachi",
+    "img": "assets/animus/cachi.webp"
+   },
+   "cachi-the-guard": {
+    "name": "Cachi [The Guard]",
+    "img": "assets/animus/cachi-the-guard.webp"
+   },
+   "celince": {
+    "name": "Celince",
+    "img": "assets/animus/celince.webp"
+   },
+   "chiaki": {
+    "name": "Chiaki",
+    "img": "assets/animus/chiaki.webp"
+   },
+   "chiaki-the-echo": {
+    "name": "Chiaki [The Echo]",
+    "img": "assets/animus/chiaki-the-echo.webp"
+   },
+   "danvery": {
+    "name": "Danvery",
+    "img": "assets/animus/danvery.webp"
+   },
+   "dinah": {
+    "name": "Dinah",
+    "img": "assets/animus/dinah.webp"
+   },
+   "diting": {
+    "name": "Diting",
+    "img": "assets/animus/diting.webp"
+   },
+   "dokidoki": {
+    "name": "DokiDoki",
+    "img": "assets/animus/dokidoki.webp"
+   },
+   "dorothy-the-wisher": {
+    "name": "Dorothy [The Wisher]",
+    "img": "assets/animus/dorothy-the-wisher.webp"
+   },
+   "fiamelia": {
+    "name": "Fiamelia",
+    "img": "assets/animus/fiamelia.webp"
+   },
+   "freya": {
+    "name": "Freya",
+    "img": "assets/animus/freya.webp"
+   },
+   "fuqiu": {
+    "name": "Fuqiu",
+    "img": "assets/animus/fuqiu.webp"
+   },
+   "gianc": {
+    "name": "Gianc",
+    "img": "assets/animus/gianc.webp"
+   },
+   "heinrich": {
+    "name": "Heinrich",
+    "img": "assets/animus/heinrich.webp"
+   },
+   "helkid": {
+    "name": "Helkid",
+    "img": "assets/animus/helkid.webp"
+   },
+   "hizuki-mari": {
+    "name": "Hizuki Mari",
+    "img": "assets/animus/hizuki-mari.webp"
+   },
+   "holden": {
+    "name": "Holden",
+    "img": "assets/animus/holden.webp"
+   },
+   "hoyan": {
+    "name": "Hoyan",
+    "img": "assets/animus/hoyan.webp"
+   },
+   "kazuyo": {
+    "name": "Kazuyo",
+    "img": "assets/animus/kazuyo.webp"
+   },
+   "kethos": {
+    "name": "Kethos",
+    "img": "assets/animus/kethos.webp"
+   },
+   "kloss": {
+    "name": "Kloss",
+    "img": "assets/animus/kloss.webp"
+   },
+   "kokardi": {
+    "name": "Kokardi",
+    "img": "assets/animus/kokardi.webp"
+   },
+   "kraken": {
+    "name": "Kraken",
+    "img": "assets/animus/kraken.webp"
+   },
+   "liliam": {
+    "name": "Liliam",
+    "img": "assets/animus/liliam.webp"
+   },
+   "lilith": {
+    "name": "Lilith",
+    "img": "assets/animus/lilith.webp"
+   },
+   "lily": {
+    "name": "Lily",
+    "img": "assets/animus/lily.webp"
+   },
+   "lingluo": {
+    "name": "Lingluo",
+    "img": "assets/animus/lingluo.webp"
+   },
+   "lowan": {
+    "name": "Lowan",
+    "img": "assets/animus/lowan.webp"
+   },
+   "luvia": {
+    "name": "Luvia",
+    "img": "assets/animus/luvia.webp"
+   },
+   "marvell": {
+    "name": "Marvell",
+    "img": "assets/animus/marvell.webp"
+   },
+   "massiah": {
+    "name": "Massiah",
+    "img": "assets/animus/massiah.webp"
+   },
+   "mia": {
+    "name": "Mia",
+    "img": "assets/animus/mia.webp"
+   },
+   "mio": {
+    "name": "Mio",
+    "img": "assets/animus/mio.webp"
+   },
+   "mizuki-makoto": {
+    "name": "Mizuki Makoto",
+    "img": "assets/animus/mizuki-makoto.webp"
+   },
+   "mizusumi-aya": {
+    "name": "Mizusumi Aya",
+    "img": "assets/animus/mizusumi-aya.webp"
+   },
+   "nahor": {
+    "name": "Nahor",
+    "img": "assets/animus/nahor.webp"
+   },
+   "nathenn": {
+    "name": "Nathenn",
+    "img": "assets/animus/nathenn.webp"
+   },
+   "nell": {
+    "name": "Nell",
+    "img": "assets/animus/nell.webp"
+   },
+   "nevette": {
+    "name": "Nevette",
+    "img": "assets/animus/nevette.webp"
+   },
+   "ninfoniel": {
+    "name": "Ninfoniel",
+    "img": "assets/animus/ninfoniel.webp"
+   },
+   "obol": {
+    "name": "Obol",
+    "img": "assets/animus/obol.webp"
+   },
+   "palin": {
+    "name": "Palin",
+    "img": "assets/animus/palin.webp"
+   },
+   "piayera": {
+    "name": "Piayera",
+    "img": "assets/animus/piayera.webp"
+   },
+   "plume": {
+    "name": "Plume",
+    "img": "assets/animus/plume.webp"
+   },
+   "qano": {
+    "name": "Qano",
+    "img": "assets/animus/qano.webp"
+   },
+   "rahu": {
+    "name": "Rahu",
+    "img": "assets/animus/rahu.webp"
+   },
+   "raymerry": {
+    "name": "Raymerry",
+    "img": "assets/animus/raymerry.webp"
+   },
+   "rc-77": {
+    "name": "RC-77",
+    "img": "assets/animus/rc-77.webp"
+   },
+   "rilmocha": {
+    "name": "Rilmocha",
+    "img": "assets/animus/rilmocha.webp"
+   },
+   "rosa": {
+    "name": "Rosa",
+    "img": "assets/animus/rosa.webp"
+   },
+   "sania": {
+    "name": "Sania",
+    "img": "assets/animus/sania.webp"
+   },
+   "sania-vengeful-thorn": {
+    "name": "Sania [Vengeful Thorn]",
+    "img": "assets/animus/sania-vengeful-thorn.webp"
+   },
+   "santik": {
+    "name": "Santik",
+    "img": "assets/animus/santik.webp"
+   },
+   "senyu": {
+    "name": "Senyu",
+    "img": "assets/animus/senyu.webp"
+   },
+   "sharon": {
+    "name": "Sharon",
+    "img": "assets/animus/sharon.webp"
+   },
+   "steelheart-dinah": {
+    "name": "Steelheart Dinah",
+    "img": "assets/animus/steelheart-dinah.webp"
+   },
+   "sylph": {
+    "name": "Sylph",
+    "img": "assets/animus/sylph.webp"
+   },
+   "sylvia": {
+    "name": "Sylvia",
+    "img": "assets/animus/sylvia.webp"
+   },
+   "the-lumiwarden-diting": {
+    "name": "The Lumiwarden Diting",
+    "img": "assets/animus/the-lumiwarden-diting.webp"
+   },
+   "tiamat": {
+    "name": "Tiamat",
+    "img": "assets/animus/tiamat.webp"
+   },
+   "tsukiyo-mi": {
+    "name": "Tsukiyo Mi",
+    "img": "assets/animus/tsukiyo-mi.webp"
+   },
+   "turandot": {
+    "name": "Turandot",
+    "img": "assets/animus/turandot.webp"
+   },
+   "valerian": {
+    "name": "Valerian",
+    "img": "assets/animus/valerian.webp"
+   },
+   "veronika": {
+    "name": "Veronika",
+    "img": "assets/animus/veronika.webp"
+   },
+   "vice": {
+    "name": "Vice",
+    "img": "assets/animus/vice.webp"
+   },
+   "viper": {
+    "name": "Viper",
+    "img": "assets/animus/viper.webp"
+   },
+   "xiada": {
+    "name": "Xiada",
+    "img": "assets/animus/xiada.webp"
+   },
+   "xuan-chi": {
+    "name": "Xuan Chi",
+    "img": "assets/animus/xuan-chi.webp"
+   },
+   "xuan-li": {
+    "name": "Xuan Li",
+    "img": "assets/animus/xuan-li.webp"
+   },
+   "yeli": {
+    "name": "Yeli",
+    "img": "assets/animus/yeli.webp"
+   }
+  },
+  "shell": {
+   "ace-batter": {
+    "name": "Ace Batter",
+    "img": "assets/shell/ace-batter.webp"
+   },
+   "alicorn": {
+    "name": "Alicorn",
+    "img": "assets/shell/alicorn.webp"
+   },
+   "amber": {
+    "name": "Amber",
+    "img": "assets/shell/amber.webp"
+   },
+   "artisan": {
+    "name": "Artisan",
+    "img": "assets/shell/artisan.webp"
+   },
+   "champion-gator": {
+    "name": "Champion Gator",
+    "img": "assets/shell/champion-gator.webp"
+   },
+   "codex-of-magic": {
+    "name": "Codex of Magic",
+    "img": "assets/shell/codex-of-magic.webp"
+   },
+   "count": {
+    "name": "Count",
+    "img": "assets/shell/count.webp"
+   },
+   "dark-moon": {
+    "name": "Dark Moon",
+    "img": "assets/shell/dark-moon.webp"
+   },
+   "doom-crow": {
+    "name": "Doom Crow",
+    "img": "assets/shell/doom-crow.webp"
+   },
+   "fortissimo": {
+    "name": "Fortissimo",
+    "img": "assets/shell/fortissimo.webp"
+   },
+   "gigabyte": {
+    "name": "Gigabyte",
+    "img": "assets/shell/gigabyte.webp"
+   },
+   "golden-lion": {
+    "name": "Golden Lion",
+    "img": "assets/shell/golden-lion.webp"
+   },
+   "halloween": {
+    "name": "Halloween",
+    "img": "assets/shell/halloween.webp"
+   },
+   "jackal-guard": {
+    "name": "Jackal Guard",
+    "img": "assets/shell/jackal-guard.webp"
+   },
+   "law-of-silence": {
+    "name": "Law of Silence",
+    "img": "assets/shell/law-of-silence.webp"
+   },
+   "lighthouse": {
+    "name": "Lighthouse",
+    "img": "assets/shell/lighthouse.webp"
+   },
+   "moon-bunny": {
+    "name": "Moon Bunny",
+    "img": "assets/shell/moon-bunny.webp"
+   },
+   "ouroboros": {
+    "name": "Ouroboros",
+    "img": "assets/shell/ouroboros.webp"
+   },
+   "reaper-steps": {
+    "name": "Reaper Steps",
+    "img": "assets/shell/reaper-steps.webp"
+   },
+   "revelation": {
+    "name": "Revelation",
+    "img": "assets/shell/revelation.webp"
+   },
+   "supernova": {
+    "name": "Supernova",
+    "img": "assets/shell/supernova.webp"
+   },
+   "sword-vii": {
+    "name": "Sword VII",
+    "img": "assets/shell/sword-vii.webp"
+   },
+   "tiger-yin": {
+    "name": "Tiger Yin",
+    "img": "assets/shell/tiger-yin.webp"
+   },
+   "white-fang": {
+    "name": "White Fang",
+    "img": "assets/shell/white-fang.webp"
+   }
+  }
+ },
+ "lineups": [
+  {
+   "enemy": [
+    {
+     "animus": "Nathenn",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Kethos",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Areal",
+     "shell": "Moon Bunny"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Lowan",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Luvia",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Areal",
+     "shell": "Halloween"
+    }
+   ],
+   "guide": "หุบ Areal Mark nathenn"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Areal",
+     "shell": "Moon Bunny"
+    },
+    {
+     "animus": "Nathenn",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Kethos",
+     "shell": "Jackal Guard"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Areal",
+     "shell": "Halloween"
+    },
+    {
+     "animus": "Lowan",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Luvia",
+     "shell": "Jackal Guard"
+    }
+   ],
+   "guide": "ฆ่า Nathenn first"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Kethos",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Areal",
+     "shell": "Moon Bunny"
+    },
+    {
+     "animus": "Nathenn",
+     "shell": "Jackal Guard"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Fiamelia",
+     "shell": "Halloween"
+    },
+    {
+     "animus": "Lowan",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Luvia",
+     "shell": "Jackal Guard"
+    }
+   ],
+   "guide": "ยิงๆ"
+  }
+ ]
+}
