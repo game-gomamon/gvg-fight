@@ -6,14 +6,15 @@ on:
       - main
   workflow_dispatch:
 
-# Required for actions/deploy-pages. contents:read is enough now —
-# we no longer commit data.json back to the repo.
+# actions:write is needed to delete stale "github-pages" artifacts left behind
+# by earlier attempts of the same run — that is what causes deploy-pages to
+# fail with "Multiple artifacts named github-pages were unexpectedly found".
 permissions:
   contents: read
   pages: write
   id-token: write
+  actions: write
 
-# Let a running deploy finish rather than cancelling it midway.
 concurrency:
   group: pages
   cancel-in-progress: false
@@ -44,15 +45,64 @@ jobs:
       - name: Fail early if data.json is missing
         run: test -s data.json
 
+      # Collect only what the site actually needs. Uploading the whole
+      # checkout would ship .git, build.py, requirements.txt and the xlsx,
+      # and the extra size is what pushes the upload into retry territory.
+      - name: Assemble _site
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          rm -rf _site
+          mkdir -p _site
+
+          cp data.json _site/
+
+          for d in assets css js img images fonts vendor; do
+            [ -d "$d" ] && cp -r "$d" _site/
+          done
+
+          for f in *.html *.css *.js *.mjs *.json *.svg *.png *.jpg *.webp *.ico *.webmanifest *.txt; do
+            cp "$f" _site/
+          done
+
+          # Stop Pages from running the files through Jekyll.
+          touch _site/.nojekyll
+
+          echo "--- _site contents ---"
+          find _site -maxdepth 2 -printf '%P\n' | sort
+          du -sh _site
+
+      - name: Fail if the site has no entry point
+        run: test -s _site/index.html
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
         with:
           enablement: true
 
+      # Guards against duplicate artifacts when this run is retried.
+      - name: Remove stale github-pages artifacts from earlier attempts
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const artifacts = await github.paginate(
+              github.rest.actions.listWorkflowRunArtifacts,
+              { owner, repo, run_id: context.runId, per_page: 100 }
+            );
+            const stale = artifacts.filter(a => a.name === 'github-pages' && !a.expired);
+            if (stale.length === 0) {
+              core.info('No stale github-pages artifacts found.');
+            }
+            for (const a of stale) {
+              core.info(`Deleting stale artifact ${a.id} (created ${a.created_at})`);
+              await github.rest.actions.deleteArtifact({ owner, repo, artifact_id: a.id });
+            }
+
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
 
   deploy:
     needs: build

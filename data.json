@@ -418,16 +418,171 @@
   {
    "enemy": [
     {
+     "animus": "Kethos",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Sylvia",
+     "shell": "Moon Bunny"
+    },
+    {
+     "animus": "Xuan Chi",
+     "shell": "Amber"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Massiah",
+     "shell": "Count"
+    },
+    {
+     "animus": "Tsukiyo Mi",
+     "shell": "Codex of Magic"
+    },
+    {
+     "animus": "Raymerry",
+     "shell": "Champion Gator"
+    }
+   ],
+   "guide": "Tsukiyo Mi (เร็วสุด) ดึง → Massiah ปาด (Build: Fury,Keeneye,Furyedge) → Ray โดด และหาจังหวะ Execute"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Nathenn",
+     "shell": "Ouroboros"
+    },
+    {
+     "animus": "Asal",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Areal",
+     "shell": "Halloween"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Nathenn",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Sylvia",
+     "shell": "Moon Bunny"
+    },
+    {
+     "animus": "Luvia",
+     "shell": "Codex of Magic"
+    }
+   ],
+   "guide": "Sylvia (เร็วสุด) Reset → Buff Nathenn → Nathenn Skill 3 → Luvia คอยหุบ Areal → ตี Asal และหาจังหวะ Execute Asal [ลำดับการฆ่า Asal, Nathenn, Areal]"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Kethos",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Sylvia",
+     "shell": "Moon Bunny"
+    },
+    {
+     "animus": "Nathenn",
+     "shell": "Jackal Guard"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Sylvia",
+     "shell": "Gigabyte"
+    },
+    {
      "animus": "Nathenn",
      "shell": "Jackal Guard"
     },
     {
      "animus": "Kethos",
      "shell": "Jackal Guard"
+    }
+   ],
+   "guide": "Nathenn (เร็วสุด) ตีธรรมดา → Sylvia Reset → Buff Nathenn → Kethos Skill 2 → หาจังหวะ Execute Nathenn [ลำดับการฆ่า Nathenn, Kethos, Sylvia]"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Sylvia",
+     "shell": "Moon Bunny"
+    },
+    {
+     "animus": "Sharon",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Xuan Chi",
+     "shell": "Amber"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Raymerry",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Liliam",
+     "shell": "Law of Silence"
+    },
+    {
+     "animus": "DokiDoki",
+     "shell": "Amber"
+    }
+   ],
+   "guide": "Doki (เร็วสุด) Skill 3 → Liliam Skill 3 ใส่ XC → Ray Skill 3 [ลำดับการฆ่า XC, Sharon, Sylvia]"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Valerian",
+     "shell": "Champion Gator"
+    },
+    {
+     "animus": "Asal",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Gianc",
+     "shell": "Champion Gator"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Valerian",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Lily",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Asal",
+     "shell": "Ace Batter"
+    }
+   ],
+   "guide": "Lily (เร็วสุด) Skill 2 ดึง Asal → Asal Skill 3 ใส่ Asal → Valerian Skill 3 → Asal ย้ำใส่ Asal จน Stack = 15 → Asal ตี Gianc → Valerian คอยหลับ Asal  [ลำดับการฆ่า Gianc, Valerian, Asal]"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Nathenn",
+     "shell": "Ouroboros"
     },
     {
      "animus": "Areal",
-     "shell": "Moon Bunny"
+     "shell": "Halloween"
+    },
+    {
+     "animus": "Lowan",
+     "shell": "Amber"
     }
    ],
    "ours": [
@@ -436,63 +591,111 @@
      "shell": "Amber"
     },
     {
-     "animus": "Luvia",
-     "shell": "Jackal Guard"
-    },
-    {
      "animus": "Areal",
      "shell": "Halloween"
+    },
+    {
+     "animus": "Xuan Li",
+     "shell": "Doom Crow"
     }
    ],
-   "guide": "หุบ Areal Mark nathenn"
+   "guide": "Lowan Mark Nathenn → XL Skill 3 → Areal Skill 3 → Lowan Skill 2 ใส่ Nathenn → XL Skill 2 ใส่ Nathenn [ลำดับการฆ่า Nathenn, Lowan, Areal]"
   },
   {
    "enemy": [
     {
-     "animus": "Areal",
-     "shell": "Moon Bunny"
+     "animus": "Sania",
+     "shell": "Gigabyte"
     },
     {
-     "animus": "Nathenn",
-     "shell": "Jackal Guard"
-    },
-    {
-     "animus": "Kethos",
-     "shell": "Jackal Guard"
-    }
-   ],
-   "ours": [
-    {
-     "animus": "Areal",
-     "shell": "Halloween"
-    },
-    {
-     "animus": "Lowan",
+     "animus": "Raymerry",
      "shell": "Amber"
     },
     {
-     "animus": "Luvia",
+     "animus": "Kethos",
+     "shell": "Amber"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Nathenn",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Sylvia",
+     "shell": "Moon Bunny"
+    },
+    {
+     "animus": "Kethos",
      "shell": "Jackal Guard"
     }
    ],
-   "guide": "ฆ่า Nathenn first"
+   "guide": "Nathenn (เร็วสุด) Skill 3 → Sylvia Buff Kethos → Kethos Skill 2 → หาจังหวะ Execute Sania [ลำดับการฆ่า Sania, Ray, Kethos ]"
   },
   {
    "enemy": [
     {
-     "animus": "Kethos",
-     "shell": "Jackal Guard"
+     "animus": "Xuan Li",
+     "shell": "Doom Crow"
     },
     {
-     "animus": "Areal",
-     "shell": "Moon Bunny"
+     "animus": "Lowan",
+     "shell": "Ace Batter"
     },
     {
-     "animus": "Nathenn",
+     "animus": "Fuqiu",
+     "shell": "Supernova"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Sharon",
+     "shell": "Codex of Magic"
+    },
+    {
+     "animus": "Obol",
+     "shell": "Codex of Magic"
+    },
+    {
+     "animus": "Heinrich",
+     "shell": "Codex of Magic"
+    }
+   ],
+   "guide": "Sharon (เร็วสุด) Skill 3 → Obol Skill 3 → Heinrich Skill 2 → ทำซ้ำอีกรอบแล้วไล่ฆ่าทีละตัว [ลำดับการฆ่า Lowan, XL, Fuqiu]"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Tiamat",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Sania",
+     "shell": "Gigabyte"
+    },
+    {
+     "animus": "Sharon",
      "shell": "Jackal Guard"
     }
    ],
    "ours": [
+    {
+     "animus": "Massiah",
+     "shell": "Count"
+    },
+    {
+     "animus": "Beyontin",
+     "shell": "Codex of Magic"
+    },
+    {
+     "animus": "Tsukiyo Mi",
+     "shell": "Codex of Magic"
+    }
+   ],
+   "guide": "Tsukiyo Mi (เร็วสุด) ดึง → Massiah ปาด (Build: Fury,Keeneye,Furyedge) → Beyontin Skill 2 ดึง → Massiah ปาด"
+  },
+  {
+   "enemy": [
     {
      "animus": "Fiamelia",
      "shell": "Halloween"
@@ -502,11 +705,1110 @@
      "shell": "Amber"
     },
     {
-     "animus": "Luvia",
+     "animus": "Kethos",
      "shell": "Jackal Guard"
     }
    ],
-   "guide": "ยิงๆ"
+   "ours": [
+    {
+     "animus": "Nathenn",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Luvia",
+     "shell": "Codex of Magic"
+    },
+    {
+     "animus": "Sania",
+     "shell": "Gigabyte"
+    }
+   ],
+   "guide": "Luvia (เร็วสุด) หุบ Lowan → Nathenn ตีธรรมดา → Sania Skill 3 ใส่ Nathenn → Nathenn Skill 3 หลัง Fiamelia Heal [ลำดับการฆ่า Fiamelia, Kethos, Lowan]"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Nathenn",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Areal",
+     "shell": "Moon Bunny"
+    },
+    {
+     "animus": "Raymerry",
+     "shell": "Champion Gator"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Areal",
+     "shell": "Halloween"
+    },
+    {
+     "animus": "Xuan Li",
+     "shell": "Doom Crow"
+    },
+    {
+     "animus": "Lowan",
+     "shell": "Amber"
+    }
+   ],
+   "guide": "Lowan Mark Nathenn → XL Skill 3 → Areal Skill 3 → Lowan Skill 2 ใส่ Nathenn → XL Skill 2 ใส่ Nathenn [ลำดับการฆ่า Nathenn, Ray, Areal]"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Xuan Li",
+     "shell": "Doom Crow"
+    },
+    {
+     "animus": "Luvia",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Sylvia",
+     "shell": "Moon Bunny"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Sharon",
+     "shell": "Codex of Magic"
+    },
+    {
+     "animus": "Xuan Chi",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Heinrich",
+     "shell": "Codex of Magic"
+    }
+   ],
+   "guide": "XC (เร็วสุด) Skill 3 → Sharon Skill 3 → Heinrich Skill 2 เล็ง Sylvia → ทำซ้ำอีกรอบ [ลำดับการฆ่า Sylvia, XL, Luvia]"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Lowan",
+     "shell": "Moon Bunny"
+    },
+    {
+     "animus": "Xuan Li",
+     "shell": "Doom Crow"
+    },
+    {
+     "animus": "Valerian",
+     "shell": "Moon Bunny"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Valerian",
+     "shell": "Champion Gator"
+    },
+    {
+     "animus": "Kokardi",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Plume",
+     "shell": "Jackal Guard"
+    }
+   ],
+   "guide": "Plume (เร็วสุด) Skill 3 → Kokardi Skill 3 เล็ง XL →  Kokardi ตีธรรมดา XL → Valerian กางโล่ [ลำดับการฆ่า XL, Lowan, Valerian]"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Asal",
+     "shell": "Ace Batter"
+    },
+    {
+     "animus": "Nathenn",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Areal",
+     "shell": "Halloween"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Sylvia",
+     "shell": "Moon Bunny"
+    },
+    {
+     "animus": "Nathenn",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Luvia",
+     "shell": "Codex of Magic"
+    }
+   ],
+   "guide": "Nathenn (เร็วสุด) ตีธรรมดา Areal → Sylvia Reset + Buff Luvia →  Nathenn Skill 3 → Luvia หุบ Areal → หาจังหวะ Execute Asal [ลำดับการฆ่า Asal, Nathenn, Areal]"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Liliam",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Xuan Chi",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Sharon",
+     "shell": "Jackal Guard"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Massiah",
+     "shell": "Count"
+    },
+    {
+     "animus": "Beyontin",
+     "shell": "Codex of Magic"
+    },
+    {
+     "animus": "Tsukiyo Mi",
+     "shell": "Codex of Magic"
+    }
+   ],
+   "guide": "Tsukiyo Mi (เร็วสุด) ดึง → Massiah ปาด (Build: Fury,Keeneye,Furyedge) → Beyontin Skill 2 ดึง → Massiah ปาด"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Raymerry",
+     "shell": "Champion Gator"
+    },
+    {
+     "animus": "Kethos",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Sania",
+     "shell": "Gigabyte"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Sharon",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "RC-77",
+     "shell": "Codex of Magic"
+    },
+    {
+     "animus": "Obol",
+     "shell": "Codex of Magic"
+    }
+   ],
+   "guide": "Sharon (เร็วสุด) Skill 3 → Obol Skill 3 → RC Skill 2 เล็ง Ketho → ทำซ้ำอีกรอบ [ลำดับการฆ่า Sania, Ray, Kethos]"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Areal",
+     "shell": "Halloween"
+    },
+    {
+     "animus": "Nathenn",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Tiamat",
+     "shell": "Amber"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Lowan",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Areal",
+     "shell": "Halloween"
+    },
+    {
+     "animus": "Xuan Li",
+     "shell": "Doom Crow"
+    }
+   ],
+   "guide": "Lowan Mark Nathenn → XL Skill 3 → Areal Skill 3 → Lowan Skill 2 ใส่ Nathenn → XL Skill 2 ใส่ Nathenn [ลำดับการฆ่า Nathenn, Tiamat, Areal]"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Sylvia",
+     "shell": "Moon Bunny"
+    },
+    {
+     "animus": "Lowan",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Luvia",
+     "shell": "Moon Bunny"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Xuan Chi",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Turandot",
+     "shell": "Codex of Magic"
+    },
+    {
+     "animus": "Qano",
+     "shell": "Revelation"
+    }
+   ],
+   "guide": "Turandot (เร็วสุด) Skill 3 → XC Skill 3 → Qano Skill 3"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Areal",
+     "shell": "Halloween"
+    },
+    {
+     "animus": "Asal",
+     "shell": "Ace Batter"
+    },
+    {
+     "animus": "Nathenn",
+     "shell": "Amber"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Sylvia",
+     "shell": "Moon Bunny"
+    },
+    {
+     "animus": "Nathenn",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Luvia",
+     "shell": "Codex of Magic"
+    }
+   ],
+   "guide": "Nathenn (เร็วสุด) ตีธรรมดา Areal → Sylvia Reset + Buff Luvia →  Nathenn ตีธรรมดา Asal → Luvia หุบ Areal → Nathenn Skill 3 → หาจังหวะ Execute Asal [ลำดับการฆ่า Asal, Nathenn, Areal]"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Fiamelia",
+     "shell": "Halloween"
+    },
+    {
+     "animus": "Raymerry",
+     "shell": "Champion Gator"
+    },
+    {
+     "animus": "Kethos",
+     "shell": "Jackal Guard"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Tiamat",
+     "shell": "Champion Gator"
+    },
+    {
+     "animus": "Sania",
+     "shell": "Gigabyte"
+    },
+    {
+     "animus": "Palin",
+     "shell": "Moon Bunny"
+    }
+   ],
+   "guide": "Sania Skill 3 ใส่ Tiamat → Palin Skill 3 ใส่ Tiamat"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Xuan Chi",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Sharon",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Fiamelia",
+     "shell": "Halloween"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Tsukiyo Mi",
+     "shell": "Codex of Magic"
+    },
+    {
+     "animus": "Massiah",
+     "shell": "Count"
+    },
+    {
+     "animus": "Beyontin",
+     "shell": "Codex of Magic"
+    }
+   ],
+   "guide": "Tsukiyo Mi (เร็วสุด) ดึง → Massiah ปาด (Build: Fury,Keeneye,Furyedge) → Beyontin Skill 2 ดึง → Massiah ปาด"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Areal",
+     "shell": "Moon Bunny"
+    },
+    {
+     "animus": "Xuan Chi",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Lowan",
+     "shell": "Amber"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Nathenn",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Areal",
+     "shell": "Halloween"
+    },
+    {
+     "animus": "Asal",
+     "shell": "Ace Batter"
+    }
+   ],
+   "guide": "Nathenn (เร็วสุด) Skill 3 → Asal Skill 3 ใส่ Lowan →  Areal Skill 3 → หาจังหวะ Execute [ลำดับการฆ่า XC, Lowan, Areal]"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Sylvia",
+     "shell": "Moon Bunny"
+    },
+    {
+     "animus": "Nathenn",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Kethos",
+     "shell": "Jackal Guard"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Sylvia",
+     "shell": "Moon Bunny"
+    },
+    {
+     "animus": "Lowan",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Piayera",
+     "shell": "Codex of Magic"
+    }
+   ],
+   "guide": "Sylvia (เร็วสุด) Reset & Buff ใส่ Lowan → Lowan Mark Nathenn → Sylvia Reset → Piayera Skill 3 & 2 → Lowan Skill 2 [ลำดับการฆ่า Nathenn, Kethos, Sylvia]"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Areal",
+     "shell": "Moon Bunny"
+    },
+    {
+     "animus": "Sharon",
+     "shell": "Moon Bunny"
+    },
+    {
+     "animus": "Xuan Chi",
+     "shell": "Amber"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Sylvia",
+     "shell": "Moon Bunny"
+    },
+    {
+     "animus": "Sharon",
+     "shell": "Codex of Magic"
+    },
+    {
+     "animus": "Nathenn",
+     "shell": "Jackal Guard"
+    }
+   ],
+   "guide": "Sylvia (เร็วสุด) Reset & Buff ใส่ Sharon → Sharon Skill 3 → Nathenn Skill 3 → Nathenn ตีธรรมดา XC → Sharon Skill 3 → หาจังหวะ Execute [ลำดับการฆ่า XC, Sharon, Areal]"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Kethos",
+     "shell": "Moon Bunny"
+    },
+    {
+     "animus": "Xuan Li",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Fuqiu",
+     "shell": "Supernova"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Nathenn",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Piayera",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Luvia",
+     "shell": "Moon Bunny"
+    }
+   ],
+   "guide": "Luvia (เร็วสุด) Skill 2 → Nathenn Skill 3 → Piayera Skill 3 → Luvia หุบ Fuqiu [ลำดับการฆ่า XL, Kethos, Fuqiu]"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Nathenn",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Areal",
+     "shell": "Moon Bunny"
+    },
+    {
+     "animus": "Sylvia",
+     "shell": "Moon Bunny"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Areal",
+     "shell": "Moon Bunny"
+    },
+    {
+     "animus": "Lowan",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Luvia",
+     "shell": "Moon Bunny"
+    }
+   ],
+   "guide": "Luvia Skill 2 → Lowan Mark Sylvia → Luvia หุบ Areal → Lowan Skill 2  [ลำดับการฆ่า Sylvia, Nathenn, Areal]"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Massiah",
+     "shell": "Count"
+    },
+    {
+     "animus": "Lily",
+     "shell": "Artisan"
+    },
+    {
+     "animus": "Turandot",
+     "shell": "Jackal Guard"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Turandot",
+     "shell": "Codex of Magic"
+    },
+    {
+     "animus": "Sharon",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Piayera",
+     "shell": "Codex of Magic"
+    }
+   ],
+   "guide": "Turandot (เร็วสุด) Skill 3 → Sharon Skill 3 → Piayera Skill 3 & 2 →  Turandot Skill 2 ใส่ Turandot → Sharon ฆ่า Massiah [ลำดับการฆ่า Massiah, Turandot, Lily]"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Raymerry",
+     "shell": "Artisan"
+    },
+    {
+     "animus": "Kethos",
+     "shell": "Moon Bunny"
+    },
+    {
+     "animus": "Fiamelia",
+     "shell": "Gigabyte"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Kethos",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Raymerry",
+     "shell": "Champion Gator"
+    },
+    {
+     "animus": "Fiamelia",
+     "shell": "Halloween"
+    }
+   ],
+   "guide": "Kethos (เร็วสุด) Skill 3 ใส่ Ray  → Kethos Skill 2 → Fiamelia Skill 3 → Ray หาจังหวะ Execute [ลำดับการฆ่า Kethos, Ray, Fiamelia]"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Kethos",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Sylvia",
+     "shell": "Moon Bunny"
+    },
+    {
+     "animus": "Nathenn",
+     "shell": "Amber"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Raymerry",
+     "shell": "Champion Gator"
+    },
+    {
+     "animus": "Massiah",
+     "shell": "Count"
+    },
+    {
+     "animus": "Lily",
+     "shell": "Amber"
+    }
+   ],
+   "guide": "Lily (เร็วสุด) Skill 2 ดึง Massiah → Massiah ปาด (Build: Fury,Keeneye,Furyedge) → Ray โดด **Min Speed Massiah ควรมากกว่า 245**"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Xuan Chi",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Areal",
+     "shell": "Moon Bunny"
+    },
+    {
+     "animus": "Sharon",
+     "shell": "Moon Bunny"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Sylvia",
+     "shell": "Moon Bunny"
+    },
+    {
+     "animus": "Luvia",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Nathenn",
+     "shell": "Jackal Guard"
+    }
+   ],
+   "guide": "Luvia (เร็วสุด)  ตีธรรมดา Sharon  → Nathenn ตีธรรมดา Sharon → Sylvia Reset & Buff Luvia → Luvia หุบ Areal → Nathenn Skill 3  → Nathenn หาจังหวะ Execute + Luvia คอยหุบ Areal [ลำดับการฆ่า Sharon, XC, Areal]"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Asal",
+     "shell": "Ace Batter"
+    },
+    {
+     "animus": "Sania",
+     "shell": "Gigabyte"
+    },
+    {
+     "animus": "Airon",
+     "shell": "Lighthouse"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Sharon",
+     "shell": "Codex of Magic"
+    },
+    {
+     "animus": "Nevette",
+     "shell": "Codex of Magic"
+    },
+    {
+     "animus": "Heinrich",
+     "shell": "Codex of Magic"
+    }
+   ],
+   "guide": "Sharon (เร็วสุด) Skill 3 → Nevette Skill 3 → Heinrich Skill 2 เล็ง Sania → ทำซ้ำอีกรอบ [ลำดับการฆ่า Sania, Airon, Asal]"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Areal",
+     "shell": "Moon Bunny"
+    },
+    {
+     "animus": "Nathenn",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Sylvia",
+     "shell": "Moon Bunny"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Areal",
+     "shell": "Halloween"
+    },
+    {
+     "animus": "Lowan",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Kethos",
+     "shell": "Jackal Guard"
+    }
+   ],
+   "guide": "Lowan Mark Sylvia + ตีธรรมดา Sylvia → Kethos Skill 3 ใส่ Areal → พอ Sylvia ตายแล้วให้ Lowan Mark Nathenn  [ลำดับการฆ่า Sylvia, Nathenn, Areal]"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Raymerry",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Areal",
+     "shell": "Fortissimo"
+    },
+    {
+     "animus": "Xuan Li",
+     "shell": "Doom Crow"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Luvia",
+     "shell": "Moon Bunny"
+    },
+    {
+     "animus": "Asal",
+     "shell": "Ace Batter"
+    },
+    {
+     "animus": "Sania",
+     "shell": "Gigabyte"
+    }
+   ],
+   "guide": "Luvia (เร็วสุด) หุบ Ray → Asal Skill 3 XL → Sania ตีธรรมดา XL → Luvia Skill 2 → Asal Skill 2 → ย้ำจน XL ตาย แล้วให้ Luvia หุบ Areal [ลำดับการฆ่า XL, Ray, Areal]"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Piayera",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Liliam",
+     "shell": "White Fang"
+    },
+    {
+     "animus": "Luvia",
+     "shell": "Moon Bunny"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Lily",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Senyu",
+     "shell": "Revelation"
+    },
+    {
+     "animus": "Valerian",
+     "shell": "Moon Bunny"
+    }
+   ],
+   "guide": "Lily (เร็วสุด) Skill 2 ดึง Senyu → Senyu Skill 3  [ลำดับการฆ่า Liliam, Piayera, Luvia]"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Areal",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Nathenn",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Luvia",
+     "shell": "Moon Bunny"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Nathenn",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Areal",
+     "shell": "Halloween"
+    },
+    {
+     "animus": "Xuan Li",
+     "shell": "Doom Crow"
+    }
+   ],
+   "guide": "Nathenn (เร็วสุด) ตีธรรมดา Luvia → XL Skill 3 → Nathenn Skill 3 →หาจังหวะ Execute [ลำดับการฆ่า Luvia, Nathen, Areal]"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Piayera",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Sharon",
+     "shell": "Moon Bunny"
+    },
+    {
+     "animus": "Kethos",
+     "shell": "Champion Gator"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Danvery",
+     "shell": "Halloween"
+    },
+    {
+     "animus": "Nathenn",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Sylvia",
+     "shell": "Jackal Guard"
+    }
+   ],
+   "guide": "Nathenn (เร็วสุด) Skill 3 → Sylvia Buff ใส่ Danvery →  Nathenn Skill 2 ใส่ Piayera → Danvery Mark Kethos → หาจังหวะ Execute Sharon [ลำดับการฆ่า Piayera, Sharon, Kethos]"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "DokiDoki",
+     "shell": "Codex of Magic"
+    },
+    {
+     "animus": "Gianc",
+     "shell": "Champion Gator"
+    },
+    {
+     "animus": "Xuan Li",
+     "shell": "Doom Crow"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Kethos",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Areal",
+     "shell": "Fortissimo"
+    },
+    {
+     "animus": "Xuan Li",
+     "shell": "Doom Crow"
+    }
+   ],
+   "guide": "Kethos Skill 3 ใส่ XL → XL Skill 3 → Areal Skill 3 → Kethos Skill 2 [ลำดับการฆ่า XL, Gianc, Doki]"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Xuan Chi",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Sharon",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Areal",
+     "shell": "Moon Bunny"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Xuan Li",
+     "shell": "Doom Crow"
+    },
+    {
+     "animus": "Areal",
+     "shell": "Moon Bunny"
+    },
+    {
+     "animus": "Tiamat",
+     "shell": "Amber"
+    }
+   ],
+   "guide": "Areal Skill 3 → XL Skill 3 → Tiamat Skill 3 [ลำดับการฆ่า Sharon, XC, Areal]"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Sharon",
+     "shell": "Moon Bunny"
+    },
+    {
+     "animus": "Areal",
+     "shell": "Halloween"
+    },
+    {
+     "animus": "Raymerry",
+     "shell": "Amber"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Lowan",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Fiamelia",
+     "shell": "Halloween"
+    },
+    {
+     "animus": "Sylvia",
+     "shell": "Moon Bunny"
+    }
+   ],
+   "guide": "Sylvia (เร็วสุด) Buff ใส่ Lowan → Lowan Mark Areal → Fiamelia Skill 3 → Sylvia Reset → Lowan Skill 2 [ลำดับการฆ่า Areal, Ray, Sharon]"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Asal",
+     "shell": "Ace Batter"
+    },
+    {
+     "animus": "Areal",
+     "shell": "Moon Bunny"
+    },
+    {
+     "animus": "Lowan",
+     "shell": "Amber"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Nathenn",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Areal",
+     "shell": "Moon Bunny"
+    },
+    {
+     "animus": "Luvia",
+     "shell": "Moon Bunny"
+    }
+   ],
+   "guide": "Luvia (เร็วสุด) หุบ Asal → Nathenn Skill 3 → Areal Skill 3 → Luvia Skill 2 → Areal Skill 2 ใส่ Nathenn → ฆ่า Lowan ก่อน แล้วให้ Luvia หุบ Areal → หาจังหวะ Execute Asal [ลำดับการฆ่า Lowan, Asal, Areal]"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Nathenn",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Areal",
+     "shell": "Moon Bunny"
+    },
+    {
+     "animus": "DokiDoki",
+     "shell": "Gigabyte"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Sylph",
+     "shell": "Moon Bunny"
+    },
+    {
+     "animus": "Lowan",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Valerian",
+     "shell": "Moon Bunny"
+    }
+   ],
+   "guide": "Sylvia (เร็วสุด) Reset & Buff ใส่ Lowan → Lowan Skill 3 → Valerian Skill 3 → Sylvia ตีธรรมดา Doki → Lowan Skill 2 → เฉพาะ Lowan คอยตี Nathenn [ลำดับการฆ่า Nathenn, Doki, Areal]"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Valerian",
+     "shell": "Gigabyte"
+    },
+    {
+     "animus": "Asal",
+     "shell": "Ace Batter"
+    },
+    {
+     "animus": "Xuan Chi",
+     "shell": "Ouroboros"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Kethos",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Sharon",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Nevette",
+     "shell": "Codex of Magic"
+    }
+   ],
+   "guide": "Sharon (เร็วสุด) Skill 3 → Nevette Skill 3 → Kethos Skill 3 ใส่ XC →  Kethos Skill 2 → Nevette Skill 3 [ลำดับการฆ่า XC, Valerian, Asal]"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Plume",
+     "shell": "Codex of Magic"
+    },
+    {
+     "animus": "Santik",
+     "shell": "Artisan"
+    },
+    {
+     "animus": "Kethos",
+     "shell": "Jackal Guard"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Tsukiyo Mi",
+     "shell": "Codex of Magic"
+    },
+    {
+     "animus": "Liliam",
+     "shell": "Law of Silence"
+    },
+    {
+     "animus": "Massiah",
+     "shell": "Count"
+    }
+   ],
+   "guide": "Tsukiyo Mi (เร็วสุด) ดึง → Massiah ปาด (Build: Fury,Keeneye,Furyedge) → Liliam รอเก็บ (กรณีปาดเดียวไม่ตาย)"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Xuan Chi",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Sharon",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Sania",
+     "shell": "Gigabyte"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Raymerry",
+     "shell": "Champion Gator"
+    },
+    {
+     "animus": "Tsukiyo Mi",
+     "shell": "Codex of Magic"
+    },
+    {
+     "animus": "Massiah",
+     "shell": "Count"
+    }
+   ],
+   "guide": "Tsukiyo Mi (เร็วสุด) ดึง → Massiah ปาด (Build: Fury,Keeneye,Furyedge) → Ray โดด"
+  },
+  {
+   "enemy": [
+    {
+     "animus": "Tiamat",
+     "shell": "Amber"
+    },
+    {
+     "animus": "Sania",
+     "shell": "Gigabyte"
+    },
+    {
+     "animus": "Xuan Chi",
+     "shell": "Amber"
+    }
+   ],
+   "ours": [
+    {
+     "animus": "Kethos",
+     "shell": "Jackal Guard"
+    },
+    {
+     "animus": "Nevette",
+     "shell": "Codex of Magic"
+    },
+    {
+     "animus": "Xuan Li",
+     "shell": "Doom Crow"
+    }
+   ],
+   "guide": "Nevette (เร็วสุด) Skill 3 → Kethos Skill 3 ใส่ Tiamat →  XL Skill 3 → Nevette Skill 3 [ลำดับการฆ่า Sania, XC, Tiamat]"
   }
  ]
 }
