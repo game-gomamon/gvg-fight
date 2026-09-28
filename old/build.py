@@ -38,13 +38,6 @@ WEBP_QUALITY = 82
 
 REL_NS = "{http://schemas.openxmlformats.org/officeDocument/2006/relationships}id"
 
-GUIDE_COL = 13  # M - "Play Guide"
-# URL characters are kept to ASCII so Thai text written right after a link
-# (no space) doesn't get swallowed into it.
-URL_RE = re.compile(r"https?://[A-Za-z0-9\-._~:/?#\[\]@!$&'()*+,;=%]+")
-# =HYPERLINK("url", "label") - the formula is lost when loading with data_only
-HYPERLINK_FN_RE = re.compile(r'^=\s*HYPERLINK\(\s*"([^"]+)"', re.IGNORECASE)
-
 
 def slug(name: str) -> str:
     s = re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
@@ -86,45 +79,6 @@ def extract_cell_images(xlsx: Path, tmp: Path):
         except (IndexError, KeyError):
             pass
     return cell_to_media, tmp
-
-
-def trim_url(u: str) -> str:
-    """Drop punctuation that ends a sentence rather than the URL."""
-    while u:
-        if u[-1] in ".,;:!?'":
-            u = u[:-1]
-        elif u.endswith(")") and u.count("(") < u.count(")"):
-            u = u[:-1]
-        else:
-            break
-    return u
-
-
-def parse_guide(cell, formula_cell=None):
-    """Turn the Play Guide cell into {"text": ..., "url": ...}.
-
-    Priority for url: native Excel hyperlink, then a =HYPERLINK() formula,
-    then the first http(s) URL found inside the text.
-    """
-    value = cell.value if cell is not None else None
-    text = str(value).strip() if value is not None else ""
-    url = None
-
-    link = getattr(cell, "hyperlink", None) if cell is not None else None
-    if link is not None and link.target:
-        url = str(link.target).strip()
-
-    if not url and formula_cell is not None and isinstance(formula_cell.value, str):
-        m = HYPERLINK_FN_RE.match(formula_cell.value)
-        if m:
-            url = m.group(1).strip()
-
-    if not url:
-        m = URL_RE.search(text)
-        if m:
-            url = trim_url(m.group(0))
-
-    return {"text": text, "url": url or None}
 
 
 def save_portrait(src: Path, dest: Path):
@@ -169,21 +123,14 @@ def main():
             roster[kind][key] = entry
 
     fight = wb[FIGHT_SHEET]
-    # Second, formula-preserving load - only used to read =HYPERLINK() targets.
-    fight_formulas = load_workbook(XLSX)[FIGHT_SHEET]
     lineups = []
-    for row in fight.iter_rows(min_row=2):
-        values = [c.value for c in row]
-        cells = [str(c).strip() if c is not None else "" for c in values + [""] * 13]
+    for row in fight.iter_rows(min_row=2, values_only=True):
+        cells = [str(c).strip() if c is not None else "" for c in list(row) + [""] * 13]
         if not cells[0]:
             continue
         enemy = [{"animus": cells[i], "shell": cells[i + 1]} for i in (0, 2, 4)]
         ours = [{"animus": cells[i], "shell": cells[i + 1]} for i in (6, 8, 10)]
-        r = row[0].row
-        guide = parse_guide(
-            fight.cell(r, GUIDE_COL), fight_formulas.cell(r, GUIDE_COL)
-        )
-        lineups.append({"enemy": enemy, "ours": ours, "guide": guide})
+        lineups.append({"enemy": enemy, "ours": ours, "guide": cells[12]})
 
     data = {
         "source": XLSX.name,
